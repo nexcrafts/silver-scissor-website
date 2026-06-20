@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Silver Scissor Hair Studio</title>
+<meta name="description" content="Learn about Silver Scissor Hair Studio in P.E.C.H.S., Karachi — our approach to grooming, our staff, and what makes every visit consistent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.page-hero {
+  background: var(--charcoal);
+  color: var(--cream);
+  padding: 70px 0 60px;
+}
+.page-hero h1 { font-size: clamp(36px,5vw,56px); color: var(--cream); }
+.page-hero p { color: var(--steel); max-width: 480px; margin-top: 16px; font-size: 16px; }
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: start;
+}
+.story-visual {
+  aspect-ratio: 4/5;
+  background: var(--charcoal);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.story-visual .big-mark { font-size: 110px; color: var(--copper); }
+.story-visual::after {
+  content: 'EST. P.E.C.H.S.';
+  position: absolute;
+  bottom: 26px; left: 26px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--steel);
+}
+.story-copy p { font-size: 16px; color: var(--charcoal); margin-bottom: 20px; max-width: 540px; }
+.story-copy p.lead { font-size: 19px; font-weight: 500; }
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 50px;
+}
+.value-card { background: var(--cream); padding: 34px 28px; }
+.value-card .ic { font-size: 26px; color: var(--copper); margin-bottom: 16px; display: block; }
+.value-card h3 { font-size: 17px; margin-bottom: 10px; }
+.value-card p { font-size: 14px; color: var(--steel-dark); }
+
+.staff-strip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.staff-card {
+  background: var(--cream-dim);
+  padding: 36px;
+  border-top: 3px solid var(--copper);
+}
+.staff-card .role {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 12px;
+  display: block;
+}
+.staff-card h3 { font-size: 22px; margin-bottom: 12px; }
+.staff-card p { font-size: 14.5px; color: var(--steel-dark); }
+
+@media (max-width: 900px) {
+  .story-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
+  .staff-strip { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo"><span class="mark">✂</span> Silver Scissor</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html" class="active">About</a>
+      <a href="location.html">Location</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="https://wa.me/923211488281" target="_blank" class="btn-wa-small">💬 WhatsApp</a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('mobile-open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Our story</span>
+    <h1>About Silver Scissor</h1>
+    <p>A grooming studio built on one idea — consistency, at a fair price, every single visit.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container story-grid">
+    <div class="story-visual">
+      <span class="big-mark">✂</span>
+    </div>
+    <div class="story-copy">
+      <p class="lead">Silver Scissor Hair Studio sits in the heart of P.E.C.H.S., Karachi — a grooming and wellness studio for men, with services delivered by a team of skilled male and female staff.</p>
+      <p>We built our menu around one simple frustration: most grooming visits come with unclear pricing and inconsistent results. Every service we offer, from a quick haircut to a full body massage, is listed with its exact rate — by staff member — so there's never a surprise at the chair.</p>
+      <p>Whether you're in for a 15-minute trim or a full relaxation session, our goal is the same: precise, professional work, on your schedule, without the guesswork.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="values-grid">
+      <div class="value-card">
+        <span class="ic">✂</span>
+        <h3>Precision First</h3>
+        <p>Every cut, trim and treatment is done with care — no rushed appointments.</p>
+      </div>
+      <div class="value-card">
+        <span class="ic">💰</span>
+        <h3>Transparent Pricing</h3>
+        <p>Rates are fixed and listed upfront for every service, by staff member.</p>
+      </div>
+      <div class="value-card">
+        <span class="ic">🕐</span>
+        <h3>Open When You Need Us</h3>
+        <p>Daily from 12:30 PM to 10:00 PM — and our AI assistant answers questions even after we close.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cut-divider"></div>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Our team</span>
+    <h2 class="section-title">Staff you can choose</h2>
+    <p class="section-lede">Every service at Silver Scissor is available from either our male or female staff, with pricing shown clearly for both — book whichever you're most comfortable with.</p>
+    <div class="staff-strip">
+      <div class="staff-card">
+        <span class="role">Male Staff</span>
+        <h3>Hair, Beard & Body</h3>
+        <p>Specializing in hair cutting, beard trimming, dyes, protein treatments, full body massage and scrubbing, manicure & pedicure.</p>
+      </div>
+      <div class="staff-card">
+        <span class="role">Female Staff</span>
+        <h3>Facial & Wellness</h3>
+        <p>Specializing in facials including the 7-in-1 Hydra Facial, full body massage and scrubbing, hair protein treatments, manicure & pedicure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band container" style="text-align:center; padding: 70px 0 100px;">
+  <h2>Come see us in person.</h2>
+  <p style="color:var(--steel-dark); max-width:480px; margin: 16px auto 30px;">Book your visit on WhatsApp or check our location for directions.</p>
+  <div class="cta-actions" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+    <a href="https://wa.me/923211488281?text=Hello! I'd like to book an appointment at Silver Scissor Hair Studio." target="_blank" class="btn btn-primary">Book on WhatsApp</a>
+    <a href="location.html" class="btn btn-outline">Get Directions</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="mark">✂</span> Silver Scissor</a>
+        <p class="footer-tagline">Grooming and wellness studio in P.E.C.H.S., Karachi. Precision cuts, treatments and massage from staff you choose.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/923211488281" target="_blank" class="social-btn" aria-label="WhatsApp">💬</a>
+          <a href="https://www.facebook.com/profile.php?id=61585368787183" target="_blank" class="social-btn" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/silverscissorhairstudio" target="_blank" class="social-btn" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>NAVIGATE</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul>
+          <li><a href="services.html">Hair Cutting</a></li>
+          <li><a href="services.html">Facials</a></li>
+          <li><a href="services.html">Body Massage</a></li>
+          <li><a href="services.html">Manicure & Pedicure</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT</h4>
+        <ul>
+          <li>115C Dupatta Gali, P.E.C.H.S., Karachi</li>
+          <li>0321-1488281</li>
+          <li>Daily, 12:30 PM – 10:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Silver Scissor Hair Studio. All rights reserved.</span>
+      <span>Karachi, Pakistan</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/923211488281" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">💬</a>
+<button class="chat-toggle" onclick="toggleChat()" aria-label="Open chat assistant">✂</button>
+<div class="chat-panel" id="chatPanel">
+  <iframe src="chatbot.html" title="Silver Scissor AI Assistant"></iframe>
+</div>
+
+<script>
+function toggleChat() {
+  document.getElementById('chatPanel').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
