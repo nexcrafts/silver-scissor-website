@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services & Pricing — Silver Scissor Hair Studio</title>
+<meta name="description" content="Full service menu and pricing at Silver Scissor Hair Studio, Karachi — haircuts, facials, scrubs and massage from male or female staff.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.page-hero {
+  background: var(--charcoal);
+  color: var(--cream);
+  padding: 70px 0 60px;
+}
+.page-hero h1 { font-size: clamp(36px,5vw,56px); color: var(--cream); }
+.page-hero p { color: var(--steel); max-width: 480px; margin-top: 16px; font-size: 16px; }
+
+.staff-toggle {
+  display: flex;
+  gap: 0;
+  margin: 50px auto 10px;
+  max-width: 360px;
+  border: 1.5px solid var(--charcoal);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.staff-toggle button {
+  flex: 1;
+  padding: 13px 0;
+  background: var(--cream);
+  border: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.staff-toggle button.active {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+.toggle-note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--steel-dark);
+  margin-bottom: 50px;
+}
+
+.menu-wrap { max-width: 760px; margin: 0 auto; }
+.menu-section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin: 50px 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.menu-section-title:first-child { margin-top: 0; }
+.menu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px dashed var(--line);
+  gap: 20px;
+}
+.menu-row .name { font-size: 17px; font-weight: 500; }
+.menu-row .name small { display: block; font-size: 13px; color: var(--steel-dark); font-weight: 400; margin-top: 3px;}
+.menu-row .price {
+  font-family: 'Oswald', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--charcoal);
+  white-space: nowrap;
+}
+.menu-row.unavailable { opacity: 0.4; }
+.menu-row.unavailable .price { font-size: 13px; font-weight: 400; font-style: italic; }
+
+.menu-cta {
+  text-align: center;
+  margin: 60px auto 0;
+}
+
+@media (max-width: 600px) {
+  .menu-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo"><span class="mark">✂</span> Silver Scissor</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="about.html">About</a>
+      <a href="location.html">Location</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="https://wa.me/923211488281" target="_blank" class="btn-wa-small">💬 WhatsApp</a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('mobile-open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Full menu</span>
+    <h1>Services & Pricing</h1>
+    <p>Every service can be booked from male or female staff. Toggle below to see the right rates for you.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:50px;">
+  <div class="container">
+
+    <div class="staff-toggle">
+      <button class="active" id="btnMale" onclick="showStaff('male')">Male Staff</button>
+      <button id="btnFemale" onclick="showStaff('female')">Female Staff</button>
+    </div>
+    <p class="toggle-note">Pricing and availability differ by staff member.</p>
+
+    <div class="menu-wrap" id="menuMale">
+      <div class="menu-section-title">Hair & Beard</div>
+      <div class="menu-row"><div class="name">Hair Cutting</div><div class="price">Rs. 350</div></div>
+      <div class="menu-row"><div class="name">Beard Trimming</div><div class="price">Rs. 350</div></div>
+      <div class="menu-row"><div class="name">Hair Dye</div><div class="price">Rs. 500</div></div>
+      <div class="menu-row"><div class="name">Beard Dye</div><div class="price">Rs. 350</div></div>
+      <div class="menu-row"><div class="name">Hair Protein Treatment</div><div class="price">Rs. 1000</div></div>
+      <div class="menu-row"><div class="name">Full Body Hair Trimming</div><div class="price">Rs. 2500</div></div>
+
+      <div class="menu-section-title">Facial & Skin</div>
+      <div class="menu-row"><div class="name">Facial <small>3 tiers available</small></div><div class="price">Rs. 1500 / 2000 / 2500</div></div>
+      <div class="menu-row unavailable"><div class="name">7 in 1 Hydra Facial</div><div class="price">Not offered from Male Staff</div></div>
+
+      <div class="menu-section-title">Body & Relaxation</div>
+      <div class="menu-row"><div class="name">Full Body Massage <small>1 hour</small></div><div class="price">Rs. 2000</div></div>
+      <div class="menu-row"><div class="name">Full Body Scrubbing</div><div class="price">Rs. 1800</div></div>
+      <div class="menu-row"><div class="name">Shower</div><div class="price">Rs. 500</div></div>
+
+      <div class="menu-section-title">Hands & Feet</div>
+      <div class="menu-row"><div class="name">Manicure & Pedicure</div><div class="price">Rs. 2000</div></div>
+    </div>
+
+    <div class="menu-wrap" id="menuFemale" style="display:none;">
+      <div class="menu-section-title">Facial & Skin</div>
+      <div class="menu-row"><div class="name">Facial <small>3 tiers available</small></div><div class="price">Rs. 2500 / 3000 / 3500</div></div>
+      <div class="menu-row"><div class="name">7 in 1 Hydra Facial</div><div class="price">Rs. 4500</div></div>
+
+      <div class="menu-section-title">Body & Relaxation</div>
+      <div class="menu-row"><div class="name">Full Body Massage <small>1 hour</small></div><div class="price">Rs. 4000</div></div>
+      <div class="menu-row"><div class="name">Full Body Scrubbing</div><div class="price">Rs. 3000</div></div>
+      <div class="menu-row"><div class="name">Full Body Hair Trimming</div><div class="price">Rs. 5000</div></div>
+      <div class="menu-row"><div class="name">Hair Protein Treatment</div><div class="price">Rs. 1500</div></div>
+
+      <div class="menu-section-title">Hands & Feet</div>
+      <div class="menu-row"><div class="name">Manicure & Pedicure</div><div class="price">Rs. 3000</div></div>
+
+      <div class="menu-section-title">Hair & Beard</div>
+      <div class="menu-row unavailable"><div class="name">Hair Cutting</div><div class="price">Not offered from Female Staff</div></div>
+      <div class="menu-row unavailable"><div class="name">Beard Trimming</div><div class="price">Not offered from Female Staff</div></div>
+    </div>
+
+    <div class="menu-cta">
+      <a href="https://wa.me/923211488281?text=Hello! I'd like to book an appointment at Silver Scissor Hair Studio." target="_blank" class="btn btn-primary">Book This Service on WhatsApp</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="mark">✂</span> Silver Scissor</a>
+        <p class="footer-tagline">Grooming and wellness studio in P.E.C.H.S., Karachi. Precision cuts, treatments and massage from staff you choose.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/923211488281" target="_blank" class="social-btn" aria-label="WhatsApp">💬</a>
+          <a href="https://www.facebook.com/profile.php?id=61585368787183" target="_blank" class="social-btn" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/silverscissorhairstudio" target="_blank" class="social-btn" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>NAVIGATE</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul>
+          <li><a href="services.html">Hair Cutting</a></li>
+          <li><a href="services.html">Facials</a></li>
+          <li><a href="services.html">Body Massage</a></li>
+          <li><a href="services.html">Manicure & Pedicure</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT</h4>
+        <ul>
+          <li>115C Dupatta Gali, P.E.C.H.S., Karachi</li>
+          <li>0321-1488281</li>
+          <li>Daily, 12:30 PM – 10:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Silver Scissor Hair Studio. All rights reserved.</span>
+      <span>Karachi, Pakistan</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/923211488281" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">💬</a>
+<button class="chat-toggle" onclick="toggleChat()" aria-label="Open chat assistant">✂</button>
+<div class="chat-panel" id="chatPanel">
+  <iframe src="chatbot.html" title="Silver Scissor AI Assistant"></iframe>
+</div>
+
+<script>
+function toggleChat() {
+  document.getElementById('chatPanel').classList.toggle('open');
+}
+function showStaff(type) {
+  document.getElementById('menuMale').style.display = type === 'male' ? 'block' : 'none';
+  document.getElementById('menuFemale').style.display = type === 'female' ? 'block' : 'none';
+  document.getElementById('btnMale').classList.toggle('active', type === 'male');
+  document.getElementById('btnFemale').classList.toggle('active', type === 'female');
+}
+</script>
+
+</body>
+</html>
