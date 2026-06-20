@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silver Scissor Hair Studio — Grooming, Precision, Karachi</title>
+<meta name="description" content="Silver Scissor Hair Studio in P.E.C.H.S., Karachi — haircuts, facials, body treatments and massage from skilled male and female staff. Book on WhatsApp today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* HOME-SPECIFIC */
+.hero {
+  background: var(--charcoal);
+  color: var(--cream);
+  padding: 100px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+  padding-bottom: 80px;
+}
+.hero-eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--copper-light);
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 28px; height: 1px;
+  background: var(--copper-light);
+}
+.hero h1 {
+  font-size: clamp(40px, 6vw, 68px);
+  color: var(--cream);
+  margin-bottom: 24px;
+}
+.hero h1 span { color: var(--copper-light); }
+.hero p.lede {
+  font-size: 17px;
+  color: var(--steel);
+  max-width: 460px;
+  margin-bottom: 38px;
+}
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  border-top: 1px solid rgba(245,242,237,0.15);
+  padding-top: 28px;
+}
+.hero-stat .num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  color: var(--copper-light);
+  font-weight: 700;
+}
+.hero-stat .label {
+  font-size: 12px;
+  color: var(--steel);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Hero visual: scissor mark composition */
+.hero-visual {
+  position: relative;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-card {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 3/4;
+  background: linear-gradient(155deg, var(--charcoal-light), var(--charcoal));
+  border: 1px solid rgba(184,188,194,0.25);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+.hero-card .scissor-mark {
+  font-size: 64px;
+  color: var(--copper-light);
+}
+.hero-card .card-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--steel);
+}
+.hero-card .stars { color: var(--copper-light); letter-spacing: 2px; }
+.hero-card .since {
+  position: absolute;
+  top: 22px; left: 22px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--steel-dark);
+}
+.hero-card .open-badge {
+  position: absolute;
+  bottom: 22px; right: 22px;
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px;
+  color: var(--steel);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.dot-live { width: 6px; height: 6px; background: #4ade80; border-radius: 50%; }
+
+/* INTRO STRIP */
+.intro-strip {
+  padding: 70px 0;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: start;
+}
+.intro-strip .big-label {
+  font-size: clamp(26px, 3.4vw, 36px);
+}
+.intro-list {
+  display: grid;
+  gap: 22px;
+}
+.intro-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+.intro-item .ic {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  color: var(--copper);
+  font-weight: 700;
+  min-width: 26px;
+}
+.intro-item h4 { font-size: 16px; margin-bottom: 6px; }
+.intro-item p { font-size: 14.5px; color: var(--steel-dark); }
+
+/* SERVICES PREVIEW */
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.svc-card {
+  background: var(--cream);
+  padding: 36px 30px;
+  transition: background 0.25s;
+}
+.svc-card:hover { background: var(--cream-dim); }
+.svc-card .num { font-family: 'Oswald', sans-serif; color: var(--copper); font-size: 13px; font-weight: 700; margin-bottom: 16px; display: block; }
+.svc-card h3 { font-size: 19px; margin-bottom: 10px; }
+.svc-card p { font-size: 14px; color: var(--steel-dark); margin-bottom: 16px; }
+.svc-card .from { font-size: 13px; font-weight: 700; color: var(--charcoal); }
+.svc-card .from span { color: var(--steel-dark); font-weight: 400; }
+
+/* LOCATION TEASER */
+.loc-teaser {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.loc-info { padding: 80px 60px; }
+.loc-map-stub {
+  background: var(--charcoal-light);
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loc-map-stub::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(184,188,194,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184,188,194,0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.loc-pin {
+  position: relative;
+  z-index: 2;
+  width: 52px; height: 52px;
+  background: var(--copper);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex; align-items: center; justify-content: center;
+}
+.loc-pin span { transform: rotate(45deg); font-size: 20px; }
+.loc-detail { display: flex; gap: 14px; margin-bottom: 22px; }
+.loc-detail .lic { color: var(--copper); font-size: 18px; min-width: 22px; }
+.loc-detail h4 { font-size: 14px; letter-spacing: 0.05em; margin-bottom: 4px; }
+.loc-detail p { font-size: 14.5px; color: var(--steel-dark); }
+
+/* TESTIMONIAL STRIP */
+.testi-strip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.testi-card {
+  background: var(--cream-dim);
+  padding: 32px;
+  border-left: 3px solid var(--copper);
+}
+.testi-card .stars { color: var(--copper); letter-spacing: 2px; margin-bottom: 14px; display: block; }
+.testi-card p.quote { font-size: 15px; color: var(--charcoal); margin-bottom: 16px; }
+.testi-card .who { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--steel-dark); }
+
+/* FINAL CTA */
+.cta-band {
+  text-align: center;
+  padding: 90px 0;
+}
+.cta-band h2 { font-size: clamp(30px,4.4vw,46px); margin-bottom: 18px; }
+.cta-band p { color: var(--steel-dark); max-width: 480px; margin: 0 auto 36px; font-size: 16px; }
+.cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; padding-top: 20px; }
+  .hero-visual { height: 320px; order: -1; }
+  .intro-strip { grid-template-columns: 1fr; gap: 30px; }
+  .svc-grid { grid-template-columns: 1fr; }
+  .loc-teaser { grid-template-columns: 1fr; }
+  .loc-info { padding: 50px 24px; }
+  .testi-strip { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo"><span class="mark">✂</span> Silver Scissor</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="location.html">Location</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="https://wa.me/923211488281" target="_blank" class="btn-wa-small">💬 WhatsApp</a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('mobile-open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <div class="hero-eyebrow">P.E.C.H.S., Karachi</div>
+      <h1>Precision grooming,<br><span>every single cut.</span></h1>
+      <p class="lede">Silver Scissor Hair Studio brings together skilled male and female staff for haircuts, facials, body treatments and massage — open daily from 12:30 PM to 10:00 PM.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/923211488281?text=Hello! I'd like to book an appointment at Silver Scissor Hair Studio." target="_blank" class="btn btn-primary">Book on WhatsApp</a>
+        <a href="services.html" class="btn btn-outline-light">View Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num">4.5★</div>
+          <div class="label">Rating</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">12+</div>
+          <div class="label">Services</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">12:30–10</div>
+          <div class="label">Open Daily</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="since">Est. P.E.C.H.S.</div>
+        <div class="scissor-mark">✂</div>
+        <div class="card-rating"><span class="stars">★★★★★</span> 4.5 Rating</div>
+        <div class="open-badge"><span class="dot-live"></span> Open Now</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cut-divider"></div>
+
+<section class="section intro-strip container">
+  <div>
+    <span class="eyebrow">Why Silver Scissor</span>
+    <h2 class="big-label">Built around the chair, not the brand.</h2>
+  </div>
+  <div class="intro-list">
+    <div class="intro-item">
+      <span class="ic">01</span>
+      <div><h4>Staff you choose</h4><p>Every service is available from male or female staff — pick who you're comfortable with, pricing is shown upfront for both.</p></div>
+    </div>
+    <div class="intro-item">
+      <span class="ic">02</span>
+      <div><h4>Walk-in or book ahead</h4><p>Message us on WhatsApp anytime, or use our AI assistant to check availability instantly — even after hours.</p></div>
+    </div>
+    <div class="intro-item">
+      <span class="ic">03</span>
+      <div><h4>No surprises on price</h4><p>Every service is listed with its rate, by staff. What you see is what you pay — no guessing at the chair.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <span class="eyebrow">What we offer</span>
+    <h2 class="section-title">A few of our services</h2>
+  </div>
+  <div class="svc-grid container" style="padding:0;">
+    <div class="svc-card">
+      <span class="num">01</span>
+      <h3>Hair Cutting</h3>
+      <p>Clean, precise cuts tailored to your style.</p>
+      <div class="from">From <span>Rs. 350</span></div>
+    </div>
+    <div class="svc-card">
+      <span class="num">02</span>
+      <h3>Full Body Massage</h3>
+      <p>A full hour of relaxation, by the staff you choose.</p>
+      <div class="from">From <span>Rs. 2000</span></div>
+    </div>
+    <div class="svc-card">
+      <span class="num">03</span>
+      <h3>Facial Treatments</h3>
+      <p>Multi-tier facials suited to every skin type.</p>
+      <div class="from">From <span>Rs. 1500</span></div>
+    </div>
+  </div>
+  <div class="container" style="margin-top:36px;">
+    <a href="services.html" class="btn btn-outline">See Full Menu & Pricing</a>
+  </div>
+</section>
+
+<div class="cut-divider flip"></div>
+
+<section class="loc-teaser section-dark">
+  <div class="loc-info">
+    <span class="eyebrow">Find us</span>
+    <h2 class="section-title" style="font-size:34px;">Right in P.E.C.H.S.</h2>
+    <div style="margin-top:30px;">
+      <div class="loc-detail">
+        <span class="lic">📍</span>
+        <div><h4>ADDRESS</h4><p>115C Dupatta Gali, Central Commercial Area, Block 2, P.E.C.H.S., Karachi, 75400</p></div>
+      </div>
+      <div class="loc-detail">
+        <span class="lic">🕐</span>
+        <div><h4>HOURS</h4><p>Daily, 12:30 PM – 10:00 PM</p></div>
+      </div>
+      <div class="loc-detail">
+        <span class="lic">📞</span>
+        <div><h4>PHONE</h4><p>0321-1488281</p></div>
+      </div>
+    </div>
+    <a href="location.html" class="btn btn-outline-light" style="margin-top:10px;">Get Directions</a>
+  </div>
+  <div class="loc-map-stub">
+    <div class="loc-pin"><span>✂</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">What clients say</span>
+    <h2 class="section-title">Trusted around the block.</h2>
+    <div class="testi-strip" style="margin-top:40px;">
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p class="quote">"Great haircut and beard trim, staff is very professional. Will visit again!"</p>
+        <div class="who">Bilal A.</div>
+      </div>
+      <div class="testi-card">
+        <span class="stars">★★★★☆</span>
+        <p class="quote">"Good service, reasonable prices. The full body massage was very relaxing."</p>
+        <div class="who">Fahad R.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band container">
+  <h2>Ready for your next cut?</h2>
+  <p>Book in seconds on WhatsApp, or ask our AI assistant about availability, pricing and services.</p>
+  <div class="cta-actions">
+    <a href="https://wa.me/923211488281?text=Hello! I'd like to book an appointment at Silver Scissor Hair Studio." target="_blank" class="btn btn-primary">Book on WhatsApp</a>
+    <a href="contact.html" class="btn btn-outline">Contact Us</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="mark">✂</span> Silver Scissor</a>
+        <p class="footer-tagline">Grooming and wellness studio in P.E.C.H.S., Karachi. Precision cuts, treatments and massage from staff you choose.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/923211488281" target="_blank" class="social-btn" aria-label="WhatsApp">💬</a>
+          <a href="https://www.facebook.com/profile.php?id=61585368787183" target="_blank" class="social-btn" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/silverscissorhairstudio" target="_blank" class="social-btn" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>NAVIGATE</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul>
+          <li><a href="services.html">Hair Cutting</a></li>
+          <li><a href="services.html">Facials</a></li>
+          <li><a href="services.html">Body Massage</a></li>
+          <li><a href="services.html">Manicure & Pedicure</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT</h4>
+        <ul>
+          <li>115C Dupatta Gali, P.E.C.H.S., Karachi</li>
+          <li>0321-1488281</li>
+          <li>Daily, 12:30 PM – 10:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Silver Scissor Hair Studio. All rights reserved.</span>
+      <span>Karachi, Pakistan</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/923211488281" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">💬</a>
+<button class="chat-toggle" onclick="toggleChat()" aria-label="Open chat assistant">✂</button>
+<div class="chat-panel" id="chatPanel">
+  <iframe src="chatbot.html" title="Silver Scissor AI Assistant"></iframe>
+</div>
+
+<script>
+function toggleChat() {
+  document.getElementById('chatPanel').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
