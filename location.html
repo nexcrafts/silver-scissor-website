@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Location & Directions — Silver Scissor Hair Studio</title>
+<meta name="description" content="Find Silver Scissor Hair Studio at 115C Dupatta Gali, Central Commercial Area, P.E.C.H.S., Karachi. Open daily 12:30 PM to 10:00 PM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.page-hero {
+  background: var(--charcoal);
+  color: var(--cream);
+  padding: 70px 0 60px;
+}
+.page-hero h1 { font-size: clamp(36px,5vw,56px); color: var(--cream); }
+.page-hero p { color: var(--steel); max-width: 480px; margin-top: 16px; font-size: 16px; }
+
+.loc-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 0;
+}
+.loc-sidebar {
+  padding: 60px 50px;
+  background: var(--cream-dim);
+}
+.loc-detail-row { display: flex; gap: 16px; margin-bottom: 28px; }
+.loc-detail-row .lic { font-size: 20px; color: var(--copper); min-width: 24px; }
+.loc-detail-row h4 { font-size: 13px; letter-spacing: 0.08em; margin-bottom: 6px; }
+.loc-detail-row p { font-size: 15px; color: var(--steel-dark); }
+
+.map-embed-wrap {
+  min-height: 560px;
+  position: relative;
+}
+.map-embed-wrap iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  border: none;
+}
+
+.directions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.direction-card { background: var(--cream); padding: 32px 28px; }
+.direction-card .ic { font-size: 22px; color: var(--copper); margin-bottom: 14px; display: block; }
+.direction-card h3 { font-size: 16px; margin-bottom: 8px; }
+.direction-card p { font-size: 14px; color: var(--steel-dark); }
+
+@media (max-width: 900px) {
+  .loc-layout { grid-template-columns: 1fr; }
+  .loc-sidebar { padding: 40px 24px; }
+  .directions-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo"><span class="mark">✂</span> Silver Scissor</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="location.html" class="active">Location</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="https://wa.me/923211488281" target="_blank" class="btn-wa-small">💬 WhatsApp</a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('mobile-open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Find us</span>
+    <h1>Location & Directions</h1>
+    <p>Right in the Central Commercial Area of P.E.C.H.S. — easy to find, easy to reach.</p>
+  </div>
+</section>
+
+<section class="loc-layout">
+  <div class="loc-sidebar">
+    <div class="loc-detail-row">
+      <span class="lic">📍</span>
+      <div><h4>ADDRESS</h4><p>115C Dupatta Gali, Central Commercial Area, Block 2, P.E.C.H.S., Karachi, 75400</p></div>
+    </div>
+    <div class="loc-detail-row">
+      <span class="lic">🕐</span>
+      <div><h4>HOURS</h4><p>Daily, 12:30 PM – 10:00 PM</p></div>
+    </div>
+    <div class="loc-detail-row">
+      <span class="lic">📞</span>
+      <div><h4>PHONE</h4><p>0321-1488281</p></div>
+    </div>
+    <div class="loc-detail-row">
+      <span class="lic">⭐</span>
+      <div><h4>RATING</h4><p>4.5 out of 5</p></div>
+    </div>
+    <a href="https://www.google.com/maps/place/Silver+Scissor+Hair+Studio,+115c+Dupatta+Gali,+central+commercial+area+Block+2+P.E.C.H.S.,+Karachi,+75400" target="_blank" class="btn btn-primary" style="margin-top:10px;">Open in Google Maps</a>
+  </div>
+  <div class="map-embed-wrap">
+    <iframe
+      src="https://www.google.com/maps?q=Silver+Scissor+Hair+Studio+115c+Dupatta+Gali+PECHS+Karachi&output=embed"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Getting here</span>
+    <h2 class="section-title">A few landmarks nearby</h2>
+    <div class="directions-grid" style="margin-top:30px;">
+      <div class="direction-card">
+        <span class="ic">🚗</span>
+        <h3>By Car</h3>
+        <p>Located in the Central Commercial Area of P.E.C.H.S., Block 2 — easily accessible from Shahrah-e-Faisal and Tariq Road.</p>
+      </div>
+      <div class="direction-card">
+        <span class="ic">🅿️</span>
+        <h3>Parking</h3>
+        <p>Street parking is available around the commercial block — arrive a few minutes early during peak evening hours.</p>
+      </div>
+      <div class="direction-card">
+        <span class="ic">📌</span>
+        <h3>Landmark</h3>
+        <p>Look for Dupatta Gali in the P.E.C.H.S. Block 2 commercial area — the studio sign is visible from the lane.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band container" style="text-align:center; padding: 0 0 100px;">
+  <h2>See you at the studio.</h2>
+  <p style="color:var(--steel-dark); max-width:480px; margin: 16px auto 30px;">Have questions before you visit? Message us on WhatsApp or ask our AI assistant.</p>
+  <div class="cta-actions" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+    <a href="https://wa.me/923211488281?text=Hello! I'd like to ask about visiting Silver Scissor Hair Studio." target="_blank" class="btn btn-primary">Message on WhatsApp</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="mark">✂</span> Silver Scissor</a>
+        <p class="footer-tagline">Grooming and wellness studio in P.E.C.H.S., Karachi. Precision cuts, treatments and massage from staff you choose.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/923211488281" target="_blank" class="social-btn" aria-label="WhatsApp">💬</a>
+          <a href="https://www.facebook.com/profile.php?id=61585368787183" target="_blank" class="social-btn" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/silverscissorhairstudio" target="_blank" class="social-btn" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>NAVIGATE</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul>
+          <li><a href="services.html">Hair Cutting</a></li>
+          <li><a href="services.html">Facials</a></li>
+          <li><a href="services.html">Body Massage</a></li>
+          <li><a href="services.html">Manicure & Pedicure</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT</h4>
+        <ul>
+          <li>115C Dupatta Gali, P.E.C.H.S., Karachi</li>
+          <li>0321-1488281</li>
+          <li>Daily, 12:30 PM – 10:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Silver Scissor Hair Studio. All rights reserved.</span>
+      <span>Karachi, Pakistan</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/923211488281" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">💬</a>
+<button class="chat-toggle" onclick="toggleChat()" aria-label="Open chat assistant">✂</button>
+<div class="chat-panel" id="chatPanel">
+  <iframe src="chatbot.html" title="Silver Scissor AI Assistant"></iframe>
+</div>
+
+<script>
+function toggleChat() {
+  document.getElementById('chatPanel').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
